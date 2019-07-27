@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563314402237.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3202648028",
+    "id" : "1F0FC8BC",
+    "lastKnownWriteTime" : 1564255108,
+    "last_content_update" : 1564255108082,
+    "path" : "~/R/sabermetric-projects/Project 1 Combos/combos_with_noncontact.r",
+    "project_path" : "combos_with_noncontact.r",
+    "properties" : {
+        "cursorPosition" : "4,62",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

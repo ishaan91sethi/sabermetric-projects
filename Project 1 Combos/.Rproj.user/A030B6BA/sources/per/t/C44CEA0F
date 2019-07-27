@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563772498495.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "764577616",
+    "id" : "C44CEA0F",
+    "lastKnownWriteTime" : 1564255145,
+    "last_content_update" : 1564255145148,
+    "path" : "~/R/sabermetric-projects/Project 1 Combos/combos_battedball_only.r",
+    "project_path" : "combos_battedball_only.r",
+    "properties" : {
+        "cursorPosition" : "4,62",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

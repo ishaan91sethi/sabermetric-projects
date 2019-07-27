@@ -1,0 +1,9 @@
+pitch_split_formatted <- pitch_split_data %>%
+  mutate(swstrike = (description == "swinging_strike"), gb = (bb_type == "ground_ball"), iffb = (bb_type == "popup")) %>%
+  group_by(pitch_type, zone) %>%
+  summarize(avg_ev = mean(launch_speed, na.rm = TRUE), swstrike_rate = mean(swstrike, na.rm = TRUE), gb_rate = mean(gb, na.rm = TRUE), avg_xwoba = mean(xwoba, na.rm = TRUE), iffb_rate = mean(iffb, na.rm = TRUE), count = n()) %>%
+  filter(zone %in% c(1:9), count >= 250)
+  
+-These are the old variables I was looking at before pivotting to solely xwoba, with the SQL query I used below.
+
+query_swstrike <- "SELECT pitch_type, zone, description, bb_type, launch_speed, estimated_woba_using_speedangle AS xwoba, p_throws AS p_side, stand AS b_side FROM statcast_data WHERE game_year == 2018 ORDER BY RANDOM() LIMIT 100000"

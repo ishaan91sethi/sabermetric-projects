@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563841505536.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3695420714",
+    "id" : "A7C9ECBD",
+    "lastKnownWriteTime" : 1564199408,
+    "last_content_update" : 1564199408008,
+    "path" : "~/R/sabermetric-projects/Project 1 Combos/statcast_db.r",
+    "project_path" : "statcast_db.r",
+    "properties" : {
+        "cursorPosition" : "0,69",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

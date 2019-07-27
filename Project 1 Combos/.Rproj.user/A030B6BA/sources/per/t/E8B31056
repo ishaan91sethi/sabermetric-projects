@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563651900499.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1860258705",
+    "id" : "E8B31056",
+    "lastKnownWriteTime" : 1563671340,
+    "last_content_update" : 1563671340690,
+    "path" : "~/R/sabermetric-projects/Project 1 Combos/group_by_pitcherID.r",
+    "project_path" : "group_by_pitcherID.r",
+    "properties" : {
+        "cursorPosition" : "18,20",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

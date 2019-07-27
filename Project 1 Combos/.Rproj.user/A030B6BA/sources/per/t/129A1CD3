@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563824472759.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "485862096",
+    "id" : "129A1CD3",
+    "lastKnownWriteTime" : 1564199377,
+    "last_content_update" : 1564199377259,
+    "path" : "~/R/sabermetric-projects/Project 1 Combos/plot_graph.r",
+    "project_path" : "plot_graph.r",
+    "properties" : {
+        "cursorPosition" : "0,102",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
