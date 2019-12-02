@@ -1,5 +1,5 @@
-# Find the name associated with the pitcher ID in a dataframe in a column.
-ID_to_name <- function(df)
+# Find the name associated with the pitcher ID in a dataframe and add the name in a column of that df.
+add_pitcher_names <- function(df)
 {
   master <- read.csv("master.csv")
   id_names <- master %>%

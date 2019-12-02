@@ -9,6 +9,7 @@ conn <- dbConnect(SQLite(), "C:\\Users\\Ishaan\\Documents\\R\\Databases\\statcas
 pitch_count_2018 <- dbGetQuery(conn, "SELECT COUNT(*) FROM statcast_data WHERE game_year == 2018")
 
 # ORDER BY RANDOM() is SQLite specific. This query focuses only on batted balls and not swinging strikes/called strikes.
+
 query <- paste0("SELECT pitcher, pitch_type, zone, estimated_woba_using_speedangle AS xwoba, p_throws AS p_side, ",
                 "stand AS b_side, woba_value AS woba FROM statcast_data WHERE game_year == 2018 AND xwoba IS NOT NULL")
 pitch_data <- dbGetQuery(conn, query)
@@ -30,9 +31,10 @@ rhp_on_right <- pitch_split_data %>%
 
 # Format and group the data by pitch/location combinations. Also creates a column for number of pitches to filter
 # combinations with low sample sizes. Then, the data is arranged in ascending order by xwoba (best combos at top).
+
 source("format.r")
-lhp_lb_combo <- format(lhp_on_left, 200)
-lhp_rb_combo <- format(lhp_on_right, 300)
+lhp_lb_combo <- format(lhp_on_left, 100)
+lhp_rb_combo <- format(lhp_on_right, 250)
 rhp_rb_combo <- format(rhp_on_right, 300)
 rhp_lb_combo <- format(rhp_on_left, 300)
 
