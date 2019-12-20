@@ -7,8 +7,8 @@ require(magrittr)
 require(RSQLite)
 source("scrape_statcast_savant_pitcher_date.r")
 
-dates_reduced <- read_csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\Data_files\\dates_statcast_build.csv",
-                          header=TRUE)
+dates_reduced <- read_csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\data_files
+                          \\dates_statcast_build.csv", header=TRUE)
 x2017season <- dates_reduced %>%
   filter(substr(GameDate, 1, 4) == 2017)
 x2018season <- dates_reduced %>%

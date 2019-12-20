@@ -119,7 +119,7 @@ pitch_leaders <- group_by_pitcherID(all_pitch_combos, 400)
 
 # Then I added ERA and two predictors to see how well avg_xwoba correlated with them.
 
-era <- read.csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\Data_files\\era.csv",
+era <- read.csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\data_files\\era.csv",
                 header=TRUE)
 
 era <- era %>%

@@ -4,7 +4,7 @@ library(dplyr)
 library(readr) # For read_csv()
 library(riem)
 library(stringr) # For str_sub()
-library(lubridate) # Gor ymd()
+library(lubridate) # For ymd()
 
 # I first retrieved the ballpark ID and day/night indicator for Nola's starts from the 2015-2018 retrosheet
 # gamelogs.
@@ -16,7 +16,8 @@ dbDisconnect(conn)
 
 # Next, I read in the ballpark info and joined it with the above dataframe so I could get the city and state
 # for each of Nola's starts.
-park_info <- read_csv("parkinfo.csv")
+park_info <- read_csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 2 Nola Weather\\data_files\\parkinfo.csv")
+
 park_info <- park_info %>%
   select(ParkID = PARKID, CITY, STATE)
 starts_location_time <- left_join(starts_location_time, park_info, by = "ParkID")
@@ -31,7 +32,7 @@ cities <- starts_location_time %>%
 # weather data for Nola's starts.
 
 # Read in Fangraphs gamelog data for Nola
-nola_data <- read_csv("Nola_gamelog.csv")
+nola_data <- read_csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 2 Nola Weather\\data_files\\Nola_gamelog.csv")
 
 # Take out cumulative statistics row
 nola_data <- nola_data[-1,]
@@ -126,7 +127,7 @@ avg_curve_data <- curve_comparison_data %>%
 # Sample graph
 x <- c(1:5)
 GSv2 <- seq(1, 150, by = 30)
-df <- data.frame(x, y)
+df <- data.frame(x, x)
 ggplot(data = df, mapping = aes(x = x, y = x, color = GSv2)) +
   geom_point(size = 5) +
   xlab("Temperature in Farenheight") +
