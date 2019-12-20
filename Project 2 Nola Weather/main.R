@@ -1,10 +1,10 @@
 library(ggplot2)
 library(RSQLite)
 library(dplyr)
-library(readr)
+library(readr) # For read_csv()
 library(riem)
-library(stringr)
-library(lubridate)
+library(stringr) # For str_sub()
+library(lubridate) # Gor ymd()
 
 # I first retrieved the ballpark ID and day/night indicator for Nola's starts from the 2015-2018 retrosheet
 # gamelogs.

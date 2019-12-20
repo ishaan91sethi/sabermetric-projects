@@ -1,4 +1,4 @@
-# Scrapes statcast pitch by pitch data fir the 2017 and 2018 seasons.
+# Scrapes statcast pitch by pitch data for the 2017 and 2018 seasons.
 
 require(readr)
 require(dplyr)
@@ -7,7 +7,8 @@ require(magrittr)
 require(RSQLite)
 source("scrape_statcast_savant_pitcher_date.r")
 
-dates_reduced <- read_csv("dates_statcast_build.csv")
+dates_reduced <- read_csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\Data_files\\dates_statcast_build.csv",
+                          header=TRUE)
 x2017season <- dates_reduced %>%
   filter(substr(GameDate, 1, 4) == 2017)
 x2018season <- dates_reduced %>%

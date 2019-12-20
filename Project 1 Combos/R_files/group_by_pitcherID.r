@@ -9,7 +9,8 @@ group_by_pitcherID <- function(df, n)
     filter(count >= n) %>%
     arrange(avg_xwoba)
   
-  master <- read.csv("master.csv")
+  master <- read.csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\Data_files\\master.csv",
+                     header=TRUE)
   id_names <- master %>%
     select(mlb_id, mlb_name) %>%
     rename(pitcher = mlb_id)

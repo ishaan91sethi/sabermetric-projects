@@ -119,8 +119,11 @@ pitch_leaders <- group_by_pitcherID(all_pitch_combos, 400)
 
 # Then I added ERA and two predictors to see how well avg_xwoba correlated with them.
 
-era <- read.csv("era.csv")
-era <- era %>% rename(mlb_name = "ï..Name")
+era <- read.csv("C:\\Users\\Ishaan\\Documents\\R\\sabermetric-projects\\Project 1 Combos\\Data_files\\era.csv",
+                header=TRUE)
+
+era <- era %>%
+  rename(mlb_name = "ï..Name")
 pitch_leaders <- left_join(pitch_leaders, era, by = "mlb_name")
 
 # Overall pitch leaderboard

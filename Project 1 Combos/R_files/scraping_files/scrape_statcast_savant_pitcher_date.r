@@ -1,3 +1,4 @@
+# Used in statcast_db.r to scrape data from Baseball Savant.
 scrape_statcast_savant_pitcher_date <- function(start_date, end_date) {
   
   # extract year
