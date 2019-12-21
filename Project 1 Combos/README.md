@@ -12,6 +12,7 @@ as I read in that data from my local database.
 
 # Article Link
 Here are the links to my articles on the project:
+
 http://saberscience.sport.blog/2019/07/23/what-pitch-type-and-pitch-location-combos-are-most-effective-in-the-strike-zone/
 
 http://saberscience.sport.blog/2019/07/30/pitch-combos-part-2-batted-balls-only/
