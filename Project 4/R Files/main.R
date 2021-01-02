@@ -57,7 +57,7 @@ cor(full_data_clean$z_contact.y, full_data_clean$swing_strike.y)
 # -----------------------------------Actual Analysis--------------------------------------
 
 # I chose 2012 as the first year of the dataset for several reasons. The main one
-# is that it is the first year that, in least in BIS plate discipline data, the 
+# is that it is the first year that, at least in BIS plate discipline data, the 
 # strikeout trends are present league wide in the form of contact percentage declines
 # and higher swinging strike rates.
 
@@ -241,8 +241,8 @@ formal_graph("Predicted Strikeout Rate", "Actual Strikeout Rate",
              "Simple Linear Regression (O-Contact) on Test Data", test_pred_o_contact, k_test)
 
 
-lm_z_contact <- lm(k_pct ~ z_contact, data = train_data, "Strikeout")
-run_lm(lm_z_contact, cv_data, k_cv)
+lm_z_contact <- lm(k_pct ~ z_contact, data = train_data)
+run_lm(lm_z_contact, cv_data, k_cv, "Strikeout")
 test_pred_z_contact <- predict(lm_z_contact, test_data)
 mean((k_test - test_pred_z_contact) ^ 2)# Test MSE of 0.0009425313
 
@@ -350,9 +350,9 @@ run_lm(lm_fit_main_bb, cv_data, bb_cv, "Walk")
 # CV error: 0.0001944
 # Z-swing doesn't seem to help much at all. O-contact also doesn't and f-strike also don't seem
 # to help strongly either
-# Removing these 3 only slightly lowers the cv error
+# Removing these 3 slightly lowers the cv error
 
-# Robust standard error calculation
+# Robust standard error calculation because of nonlinear pattern in residual plots (heteroskedasticity)
 library(sandwich)
 library(lmtest)
 coeftest(lm_fit_main_bb, vcov. = vcovHC(lm_fit_main_bb, type = "HC0"))
@@ -362,9 +362,9 @@ lm_fit_main_bb4 <- lm(walk_pct ~ o_swing + z_contact + zone + f_strike,
                      data = train_data)
 
 run_lm(lm_fit_main_bb4, cv_data, bb_cv, "Walk")
-
+# CV MSE 0.0001925
 bptest(lm_fit_main_bb4)
-# 0.0001925
+
 
 
 # Might want to edit run_lm to fix graph titles
@@ -374,11 +374,11 @@ lm_fit_bb <- lm(walk_pct ~ o_swing + I(o_swing^2) +
 vif(lm_fit_bb)
 
 run_lm(lm_fit_bb, cv_data, bb_cv, "Walk")
+# MSE on CV set: 0.0001853
 
 plot(lm_fit_bb)
 
 bptest(lm_fit_bb)
-# MSE on CV set: 0.0001853
 
 # anova test to test significance of polynomial terms. Might be invalid
 anova(lm_fit_main_bb4, lm_fit_bb)
@@ -389,8 +389,6 @@ anova(lm_fit_main_bb4, lm_fit_bb)
 coeftest(lm_fit_bb, vcov. = vcovHC(lm_fit_bb, type = "HC0"))
 
 # Model lm_fit_bb fit on test data
-
-
 test_pred_bb <- predict(lm_fit_bb, test_data)
 mean((bb_test - test_pred_bb) ^ 2)
 # Test MSE:  0.0002140294
